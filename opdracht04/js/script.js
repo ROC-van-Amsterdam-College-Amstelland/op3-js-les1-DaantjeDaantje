@@ -1,6 +1,9 @@
 var stop = "rood";
 var maybe = "oranje";
 var go = "groen";
+var roodLichtStaatAan = false;
+var oranjeLichtStaatAan = false;
+var groenLichtStaatAan = false;
 
 window.onload = function(){
     document.getElementById("light-top").innerHTML = stop;
@@ -18,9 +21,19 @@ function zetRoodLichtAan(){
 }
 
 function zetOranjeLichtAan(){
-    document.getElementById("light-middle").style.backgroundColor = "orange";
+    if(document.getElementById("light-middle").style.backgroundColor == "gray"){
+        document.getElementById("light-middle").style.backgroundColor = "orange"
+    }
+    else{
+        document.getElementById("light-middle").style.backgroundColor = "gray";
+    }
 }
 
 function zetGroenLichtAan(){
-    document.getElementById("light-bottom").style.backgroundColor = "green";
+    if(document.getElementById("light-bottom").style.backgroundColor == "gray"){
+        document.getElementById("light-bottom").style.backgroundColor = "green";
+    }
+    else{
+        document.getElementById("light-bottom").style.backgroundColor = "gray";
+    }
 }
